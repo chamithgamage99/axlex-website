@@ -76,15 +76,15 @@ const HeroSection = () => (
       <h1 className="text-7xl md:text-9xl font-extrabold text-white tracking-tighter">
         Axle<span className="text-red-600">X</span>
       </h1>
-      <p className="text-xl md:text-2xl text-gray-300 font-light mt-4">
-        Redefining Automotive Craft
+      <p className="text-xl md:text-3xl text-gray-300 font-light mt-4">
+        Engineering the Next Drive
       </p>
-      <p className="mt-2 text-base text-gray-500 max-w-lg">
-        The first engineering-driven 3D printing, bodykit, and restoration brand in Sri Lanka.
+      <p className="mt-2 text-2xl text-white-500 max-w-lg">
+        The first engineering driven 3D printing, bodykit, and restoration brand in Sri Lanka.
       </p>
       <a 
         href="#about" 
-        className="mt-10 flex items-center gap-2 border border-gray-700 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-white/5 hover:border-gray-500 transition-all"
+        className="mt-10 flex items-center gap-2 border border-gray-1000 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-white/5 hover:border-gray-500 transition-all"
       >
         Learn More
       </a>
@@ -108,10 +108,10 @@ const AboutSection = () => (
           Engineering the <span className="text-red-600">Next Drive</span>.
         </h2>
         <p className="text-gray-400 mb-4">
-          AxleX is born from a passion for precision engineering and automotive artistry. We are Sri Lanka's first brand dedicated to pushing the boundaries of what's possible, merging state-of-the-art 3D printing technology with meticulous craftsmanship.
+AxleX is driven by a passion for precision engineering and automotive design. We’re Sri Lanka’s first brand combining advanced 3D printing with expert craftsmanship to redefine what’s possible.
         </p>
         <p className="text-gray-400">
-          Our mission is to redefine automotive craft, providing bespoke parts, custom bodykits, and full-scale restoration projects that meet the highest standards of performance and aesthetics.
+         Our mission is to redefine automotive design by creating custom parts, bodykits, and restorations that deliver top performance and style.
         </p>
       </div>
     </div>
@@ -122,22 +122,22 @@ const AboutSection = () => (
 const services = [
   { 
     title: "3D Printing & Prototyping", 
-    description: "High-precision 3D printing for custom parts, prototypes, and one-off components.", 
+    description: "High precision 3D printing for custom parts, prototypes, and one-off components.", 
     icon: <FaCube size={32} /> 
   },
   { 
     title: "Automotive Parts Design", 
-    description: "Bespoke component design and reverse engineering, optimized for performance and fit.", 
+    description: "Custom component design and reverse engineering, tailored for perfect fit and performance.", 
     icon: <MdOutlineDesignServices size={32} /> 
   },
   { 
     title: "Custom Bodykit Manufacturing", 
-    description: "From concept to reality. We design and manufacture unique bodykits that redefine your vehicle's look.", 
+    description: "Coming Soon", 
     icon: <FaCar size={32} /> 
   },
   { 
     title: "Full Vehicle Restoration", 
-    description: "Meticulous, engineering-driven restoration projects to bring classic and modern vehicles back to life.", 
+    description: "Coming Soon", 
     icon: <FaToolbox size={32} /> 
   }
 ];
@@ -178,9 +178,9 @@ const GallerySection = () => (
         {/* IMPORTANT: These are placeholders. 
           Replace <div> with <Image> component and your 'src' path.
         */}
-        <GalleryImagePlaceholder title="3D Printed Manifold" icon={<FaCube size={64} />} id="001" />
-        <GalleryImagePlaceholder title="Custom Widebody Kit" icon={<FaCar size={64} />} id="002" />
-        <GalleryImagePlaceholder title="Classic Restoration" icon={<FaToolbox size={64} />} id="003" />
+        <GalleryImagePlaceholder title="On the Way" icon={<FaCube size={64} />} id="001" />
+        <GalleryImagePlaceholder title="On the Way" icon={<FaCar size={64} />} id="002" />
+        <GalleryImagePlaceholder title="On the Way" icon={<FaToolbox size={64} />} id="003" />
       </div>
     </div>
   </section>
@@ -207,14 +207,14 @@ const ContactSection = () => (
           Let's <span className="text-red-600">Build</span> Something.
         </h2>
         <p className="text-gray-400 mb-8">
-          Have a project in mind? From a single 3D-printed part to a full-scale restoration, our engineers are ready to discuss your project.
+Have a project in mind? Whether it’s a single 3D printed part or a complete restoration, we are ready to bring your vision to life.
         </p>
         <div className="space-y-4">
           <a href="mailto:axlex@axlex.tech" className="flex items-center gap-4 text-gray-300 hover:text-red-500 transition-colors group">
             <FaEnvelope size={20} className="text-gray-600 group-hover:text-red-500 transition-colors" />
             <span>axlex@axlex.tech</span>
           </a>
-          <a href="https://wa.me/YOUR_NUMBER" className="flex items-center gap-4 text-gray-300 hover:text-green-500 transition-colors group">
+          <a href="https://wa.me/0719686487" className="flex items-center gap-4 text-gray-300 hover:text-green-500 transition-colors group">
             <FaWhatsapp size={20} className="text-gray-600 group-hover:text-green-500 transition-colors" />
             <span>WhatsApp Orders & Inquiries</span>
           </a>
@@ -267,7 +267,7 @@ const Footer = () => (
         <a href="https://www.facebook.com/your_facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors"><FaFacebook size={24} /></a>
         <a href="https://www.youtube.com/your_youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-600 transition-colors"><FaYoutube size={24} /></a>
         <a href="https://www.tiktok.com/@your_tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaTiktok size={24} /></a>
-        <a href="https://wa.me/YOUR_NUMBER" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition-colors"><FaWhatsapp size={24} /></a>
+        <a href="https://wa.me/0719686487" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition-colors"><FaWhatsapp size={24} /></a>
       </div>
 
       <p className="text-xs text-gray-600">
