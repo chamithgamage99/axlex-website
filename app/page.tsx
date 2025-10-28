@@ -1,102 +1,279 @@
+"use client";
 import React from 'react';
+// Import all the icons we'll need
+import { 
+  FaCar, 
+  FaCube, 
+  FaToolbox, 
+  FaFacebook, 
+  FaInstagram, 
+  FaYoutube, 
+  FaTiktok, 
+  FaWhatsapp,
+  FaArrowRight,
+  FaEnvelope
+} from 'react-icons/fa';
+import { MdEngineering, MdOutlineDesignServices } from 'react-icons/md';
 
-// A speedometer icon, fitting for "coming soon" and "automotive"
-const SpeedometerIcon = () => (
-  <svg
-    width="64"
-    height="64"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className="text-white mb-6"
-  >
-    <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 16.5a6.5 6.5 0 1 0 0-13 6.5 6.5 0 0 0 0 13z" />
-    <path d="M12 12l4-4" />
-    <path d="M16 12H8" />
-  </svg>
-);
-
-// Social media icons with hover effects
-const SocialIcons = () => (
-  <div className="flex gap-6 mt-10">
-    <a href="#" aria-label="Facebook" className="text-gray-500 hover:text-red-500 transition-colors">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3V2z" />
-      </svg>
-    </a>
-    <a href="#" aria-label="Twitter" className="text-gray-500 hover:text-red-500 transition-colors">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M22.46 6c-.77.35-1.6.58-2.46.67.88-.53 1.56-1.37 1.88-2.38-.83.49-1.75.85-2.72 1.04-.78-.84-1.9-1.36-3.14-1.36-2.38 0-4.3 1.92-4.3 4.3 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.76 2.81 1.91 3.58-.7-.02-1.36-.21-1.94-.53v.05c0 2.08 1.48 3.82 3.44 4.21-.36.1-.74.15-1.13.15-.28 0-.55-.03-.81-.08.55 1.7 2.13 2.94 4.02 2.97-1.47 1.15-3.32 1.83-5.33 1.83-.35 0-.69-.02-1.03-.06 1.9 1.22 4.16 1.93 6.56 1.93 7.88 0 12.19-6.53 12.19-12.19 0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.22z" />
-      </svg>
-    </a>
-    <a href="#" aria-label="YouTube" className="text-gray-500 hover:text-red-500 transition-colors">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-        <path d="M21.58 7.19c-.23-.86-.9-1.52-1.76-1.76C18.26 5 12 5 12 5s-6.26 0-7.82.43c-.86.23-1.52.9-1.76 1.76C2 8.75 2 12 2 12s0 3.25.43 4.81c.23.86.9 1.52 1.76 1.76C5.74 19 12 19 12 19s6.26 0 7.82-.43c.86-.23 1.52-.9 1.76-1.76C22 15.25 22 12 22 12s0-3.25-.42-4.81zM9.5 15.5V8.5l6 3.5-6 3.5z" />
-      </svg>
-    </a>
-  </div>
-);
-
+/* --- Main Page Component --- */
 export default function Home() {
   return (
-    <div
-      // New background: A sleek dark gradient
-      className="min-h-screen w-full relative flex flex-col items-center justify-center px-4 py-8 bg-gradient-to-br from-gray-900 via-black to-gray-900"
-      style={{
-        fontFamily: "'Inter', Arial, Helvetica, sans-serif",
-      }}
-    >
-      <main
-        className="flex flex-col items-center w-full text-center"
-        style={{
-          maxWidth: "600px",
-          zIndex: 10,
-        }}
-      >
-        {/* Replaced Rocket with Speedometer */}
-        <SpeedometerIcon />
-
-        <h1
-          // Bigger, bolder text
-          className="font-extrabold text-5xl md:text-7xl mb-4 text-white drop-shadow-lg tracking-tight"
-        >
-          We are coming soon
-        </h1>
-        <p className="mb-8 text-lg md:text-xl text-gray-300 font-medium max-w-lg">
-          We are almost there! Get notified when the website goes live.
-        </p>
-
-        <form
-          className="w-full max-w-lg flex flex-col md:flex-row gap-3"
-          // Don't forget to add your Formspree URL here
-          // action="https://formspree.io/f/YOUR_ID" method="POST"
-        >
-          <input
-            type="email"
-            name="email"
-            placeholder="Your Email Address"
-            required
-            // Styled input: dark, with a focus ring
-            className="flex-1 w-full px-5 py-3 rounded-lg text-white bg-gray-800 border border-gray-700 placeholder-gray-500 shadow-md outline-none focus:ring-2 focus:ring-red-500"
-          />
-          <button
-            type="submit"
-            // Styled button: bold red (automotive feel)
-            className="px-8 py-3 bg-red-600 hover:bg-red-700 text-white font-bold rounded-lg shadow-md transition-colors"
-          >
-            Notify Me!
-          </button>
-        </form>
-
-        <SocialIcons />
+    <div className="min-h-screen w-full bg-black text-gray-300 font-sans overflow-x-hidden">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <GallerySection />
+        <ContactSection />
       </main>
-
-      <footer className="w-full text-center text-xs text-gray-600 mt-12 p-4">
-        &copy; {new Date().getFullYear()} AxleX – All rights reserved.
-      </footer>
+      <Footer />
     </div>
   );
 }
+
+/* --- Re-usable Components for the Page --- */
+
+// 1. Navigation Bar
+const Navbar = () => (
+  <nav className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md border-b border-gray-800/50">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+      <h1 className="text-3xl font-extrabold text-white">
+        Axle<span className="text-red-600">X</span>
+      </h1>
+      <div className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <a href="#about" className="text-gray-300 hover:text-red-500 transition-colors">About</a>
+        <a href="#services" className="text-gray-300 hover:text-red-500 transition-colors">Services</a>
+        <a href="#gallery" className="text-gray-300 hover:text-red-500 transition-colors">Gallery</a>
+        <a 
+          href="#contact" 
+          className="bg-red-600 px-5 py-2 rounded-md text-white font-semibold hover:bg-red-700 transition-colors transform hover:scale-105"
+        >
+          Get a Quote
+        </a>
+      </div>
+    </div>
+  </nav>
+);
+
+// 2. Hero Section
+const HeroSection = () => (
+  <section 
+    id="hero" 
+    className="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden"
+    // Dark red gradient background
+    style={{
+      background: 'radial-gradient(ellipse at bottom, #2d0300 0%, #000000 70%)'
+    }}
+  >
+    {/* Glowing accent lines */}
+    <div className="absolute inset-0 z-0 opacity-20">
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/50 rounded-full filter blur-3xl opacity-30 animate-pulse-slow"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gray-700/50 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+    </div>
+    
+    <div className="relative z-10 flex flex-col items-center">
+      <h1 className="text-7xl md:text-9xl font-extrabold text-white tracking-tighter">
+        Axle<span className="text-red-600">X</span>
+      </h1>
+      <p className="text-xl md:text-2xl text-gray-300 font-light mt-4">
+        Redefining Automotive Craft
+      </p>
+      <p className="mt-2 text-base text-gray-500 max-w-lg">
+        The first engineering-driven 3D printing, bodykit, and restoration brand in Sri Lanka.
+      </p>
+      <a 
+        href="#about" 
+        className="mt-10 flex items-center gap-2 border border-gray-700 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-white/5 hover:border-gray-500 transition-all"
+      >
+        Learn More
+      </a>
+    </div>
+  </section>
+);
+
+// 3. About Section
+const AboutSection = () => (
+  <section id="about" className="py-24 bg-gray-950">
+    <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+      <div className="relative h-64 md:h-96 rounded-lg p-6 flex items-center justify-center bg-gray-900 border border-gray-800 overflow-hidden">
+        {/* Metallic/glowing accent lines */}
+        <span className="absolute top-0 left-0 w-full h-full bg-red-900/10 filter blur-3xl"></span>
+        <span className="absolute -top-1/2 -left-1/2 w-[200%] h-[200%] border-t border-l border-red-500/20 animate-spin-slow"></span>
+        <MdEngineering className="text-gray-700 text-9xl opacity-50" />
+        <p className="absolute text-lg font-bold text-white/40 tracking-widest uppercase">Precision</p>
+      </div>
+      <div>
+        <h2 className="text-4xl font-bold text-white mb-6">
+          Engineering the <span className="text-red-600">Next Drive</span>.
+        </h2>
+        <p className="text-gray-400 mb-4">
+          AxleX is born from a passion for precision engineering and automotive artistry. We are Sri Lanka's first brand dedicated to pushing the boundaries of what's possible, merging state-of-the-art 3D printing technology with meticulous craftsmanship.
+        </p>
+        <p className="text-gray-400">
+          Our mission is to redefine automotive craft, providing bespoke parts, custom bodykits, and full-scale restoration projects that meet the highest standards of performance and aesthetics.
+        </p>
+      </div>
+    </div>
+  </section>
+);
+
+// 4. Services Section
+const services = [
+  { 
+    title: "3D Printing & Prototyping", 
+    description: "High-precision 3D printing for custom parts, prototypes, and one-off components.", 
+    icon: <FaCube size={32} /> 
+  },
+  { 
+    title: "Automotive Parts Design", 
+    description: "Bespoke component design and reverse engineering, optimized for performance and fit.", 
+    icon: <MdOutlineDesignServices size={32} /> 
+  },
+  { 
+    title: "Custom Bodykit Manufacturing", 
+    description: "From concept to reality. We design and manufacture unique bodykits that redefine your vehicle's look.", 
+    icon: <FaCar size={32} /> 
+  },
+  { 
+    title: "Full Vehicle Restoration", 
+    description: "Meticulous, engineering-driven restoration projects to bring classic and modern vehicles back to life.", 
+    icon: <FaToolbox size={32} /> 
+  }
+];
+
+const ServicesSection = () => (
+  <section id="services" className="py-24 bg-black">
+    <div className="container mx-auto px-4">
+      <h2 className="text-center text-4xl font-bold text-white mb-16">
+        Our <span className="text-red-600">Capabilities</span>
+      </h2>
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {services.map((service) => (
+          <div 
+            key={service.title} 
+            // Card with metallic border and hover effect
+            className="relative p-6 bg-gray-900 rounded-lg border border-gray-800 transition-all duration-300 hover:border-red-600/50 hover:shadow-2xl hover:shadow-red-900/20 transform hover:-translate-y-2 overflow-hidden group"
+          >
+            {/* Glowing accent line on hover (like car lighting) */}
+            <span className="absolute top-0 left-0 w-full h-1 bg-red-600 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0"></span>
+            <div className="text-red-500 mb-5 pt-4">{service.icon}</div>
+            <h3 className="text-xl font-semibold text-white mb-2">{service.title}</h3>
+            <p className="text-gray-400 text-sm">{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+);
+
+// 5. Gallery Section
+const GallerySection = () => (
+  <section id="gallery" className="py-24 bg-gray-950">
+    <div className="container mx-auto px-4">
+      <h2 className="text-center text-4xl font-bold text-white mb-16">
+        Our <span className="text-red-600">Projects</span>
+      </h2>
+      <div className="grid md:grid-cols-3 gap-6">
+        {/* IMPORTANT: These are placeholders. 
+          Replace <div> with <Image> component and your 'src' path.
+        */}
+        <GalleryImagePlaceholder title="3D Printed Manifold" icon={<FaCube size={64} />} id="001" />
+        <GalleryImagePlaceholder title="Custom Widebody Kit" icon={<FaCar size={64} />} id="002" />
+        <GalleryImagePlaceholder title="Classic Restoration" icon={<FaToolbox size={64} />} id="003" />
+      </div>
+    </div>
+  </section>
+);
+
+// Placeholder component for the gallery
+const GalleryImagePlaceholder = ({ title, icon, id }: { title: string, icon: React.ReactNode, id: string }) => (
+  <div className="relative aspect-square bg-gray-900 rounded-lg border border-gray-800 flex items-center justify-center text-gray-700 overflow-hidden group cursor-pointer">
+    <span className="absolute z-10 text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+      {title}
+    </span>
+    <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+    {icon}
+    <span className="absolute bottom-3 right-3 text-xs text-red-600/50 font-mono tracking-widest">/PROJECT-{id}</span>
+  </div>
+);
+
+// 6. Contact Section
+const ContactSection = () => (
+  <section id="contact" className="py-24 bg-black">
+    <div className="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 className="text-4xl font-bold text-white mb-4">
+          Let's <span className="text-red-600">Build</span> Something.
+        </h2>
+        <p className="text-gray-400 mb-8">
+          Have a project in mind? From a single 3D-printed part to a full-scale restoration, our engineers are ready to discuss your project.
+        </p>
+        <div className="space-y-4">
+          <a href="mailto:axlex@axlex.tech" className="flex items-center gap-4 text-gray-300 hover:text-red-500 transition-colors group">
+            <FaEnvelope size={20} className="text-gray-600 group-hover:text-red-500 transition-colors" />
+            <span>axlex@axlex.tech</span>
+          </a>
+          <a href="https://wa.me/YOUR_NUMBER" className="flex items-center gap-4 text-gray-300 hover:text-green-500 transition-colors group">
+            <FaWhatsapp size={20} className="text-gray-600 group-hover:text-green-500 transition-colors" />
+            <span>WhatsApp Orders & Inquiries</span>
+          </a>
+        </div>
+      </div>
+
+      {/* Contact Form */}
+      <form 
+        // IMPORTANT: Add your form handler (e.g., Formspree)
+        // action="https://formspree.io/f/YOUR_ID" 
+        // method="POST"
+        className="space-y-6"
+      >
+        <div className="relative">
+          <label htmlFor="name" className="absolute -top-2.5 left-4 px-1 bg-black text-xs text-gray-400">Full Name</label>
+          <input type="text" name="name" id="name" required className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:border-red-600 transition-all" />
+        </div>
+        <div className="relative">
+          <label htmlFor="email" className="absolute -top-2.5 left-4 px-1 bg-black text-xs text-gray-400">Email Address</label>
+          <input type="email" name="email" id="email" required className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:border-red-600 transition-all" />
+        </div>
+        <div className="relative">
+          <label htmlFor="message" className="absolute -top-2.5 left-4 px-1 bg-black text-xs text-gray-400">Project Details</label>
+          <textarea name="message" id="message" rows={4} required className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:border-red-600 transition-all"></textarea>
+        </div>
+        <button 
+          type="submit" 
+          className="w-full flex items-center justify-center gap-2 bg-red-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105"
+        >
+          Send Inquiry <FaArrowRight />
+        </button>
+      </form>
+    </div>
+  </section>
+);
+
+// 7. Footer
+const Footer = () => (
+  <footer className="py-12 bg-gray-950 border-t border-gray-800/50">
+    <div className="container mx-auto px-4 text-center">
+      <h3 className="text-3xl font-extrabold text-white">
+        Axle<span className="text-red-600">X</span>
+      </h3>
+      <p className="text-gray-500 text-sm mt-2">
+        Engineering the Next Drive. First in Sri Lanka.
+      </p>
+      
+      {/* Social Icons */}
+      <div className="flex gap-6 my-8 justify-center">
+        <a href="https://www.instagram.com/your_instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors"><FaInstagram size={24} /></a>
+        <a href="https://www.facebook.com/your_facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors"><FaFacebook size={24} /></a>
+        <a href="https://www.youtube.com/your_youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-600 transition-colors"><FaYoutube size={24} /></a>
+        <a href="https://www.tiktok.com/@your_tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaTiktok size={24} /></a>
+        <a href="https://wa.me/YOUR_NUMBER" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition-colors"><FaWhatsapp size={24} /></a>
+      </div>
+
+      <p className="text-xs text-gray-600">
+        &copy; {new Date().getFullYear()} AxleX – All rights reserved.
+      </p>
+    </div>
+  </footer>
+);
