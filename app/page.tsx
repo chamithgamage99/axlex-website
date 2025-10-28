@@ -222,12 +222,11 @@ const ContactSection = () => (
       </div>
 
       {/* Contact Form */}
-      <form 
-        // IMPORTANT: Add your form handler (e.g., Formspree)
-        // action="https://formspree.io/f/YOUR_ID" 
-        // method="POST"
-        className="space-y-6"
-      >
+<form 
+  action="https://formspree.io/f/mnnopyne"  // <-- PASTE YOUR URL HERE
+  method="POST"                                // <-- ADD THIS LINE
+  className="space-y-6"
+>
         <div className="relative">
           <label htmlFor="name" className="absolute -top-2.5 left-4 px-1 bg-black text-xs text-gray-400">Full Name</label>
           <input type="text" name="name" id="name" required className="w-full px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:outline-none focus:border-red-600 transition-all" />
