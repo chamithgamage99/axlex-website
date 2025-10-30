@@ -5,7 +5,7 @@ export interface Part {
   model: 'Subaru WRX' | 'Honda Civic' | 'Lancer Evo' | 'General';
   price: number;
   description: string;
-  imageUrl?: string;
+  imageUrl?: string; // This is from our previous step, it's fine
 }
 
 export const partsData: Part[] = [
@@ -15,7 +15,7 @@ export const partsData: Part[] = [
     slug: 'custom-v1-spoiler-wrx',
     model: 'Subaru WRX',
     price: 350.00,
-    description: 'A high-performance, 3D-printed rear spoiler designed in-house for the 2015-2021 Subaru WRX. Improves downforce and aesthetics.',
+    description: 'A high-performance, 3D-printed rear spoiler designed in-house...',
   },
   {
     id: 'AX-002',
@@ -23,7 +23,7 @@ export const partsData: Part[] = [
     slug: 'widebody-fenders-civic-fk8',
     model: 'Honda Civic',
     price: 800.50,
-    description: 'Full 4-piece widebody fender flare kit for the Honda Civic Type R (FK8). Adds 50mm of width.',
+    description: 'Full 4-piece widebody fender flare kit...',
   },
   {
     id: 'AX-003',
@@ -31,7 +31,7 @@ export const partsData: Part[] = [
     slug: 'vented-hood-evo-x',
     model: 'Lancer Evo',
     price: 1200.00,
-    description: 'Lightweight carbon fiber vented hood for the Lancer Evolution X. Improves cooling and reduces weight.',
+    description: 'Lightweight carbon fiber vented hood...',
   },
   {
     id: 'AX-004',
@@ -39,15 +39,18 @@ export const partsData: Part[] = [
     slug: 'universal-front-splitter',
     model: 'General',
     price: 150.00,
-    description: 'A universal-fit front splitter. 3D-printed from durable ABS composite. Hardware included.',
+    description: 'A universal-fit front splitter...',
   },
 ];
 
+// Helper function to get all unique models for our filter
 export const getUniqueModels = () => {
   const models = partsData.map(part => part.model);
-  return ['All', ...new Set(models)];
+  // THIS IS THE ONE-LINE FIX:
+  return ['All', ...Array.from(new Set(models))];
 };
 
+// Helper function to get a single part by its slug (for the detail page)
 export const getPartBySlug = (slug: string) => {
   return partsData.find(part => part.slug === slug);
 };
