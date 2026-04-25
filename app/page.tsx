@@ -1,6 +1,6 @@
 "use client";
 import React from 'react';
-import Link from 'next/link'; // <-- ADDED THIS IMPORT
+import Link from 'next/link';
 import {
   FaCar,
   FaCube,
@@ -10,6 +10,7 @@ import {
   FaWhatsapp
 } from 'react-icons/fa';
 import { MdEngineering, MdOutlineDesignServices } from 'react-icons/md';
+import { FaWrench } from 'react-icons/fa'; // Added for European Car Servicing
 
 /* --- Main Page Component --- */
 export default function Home() {
@@ -24,9 +25,7 @@ export default function Home() {
   );
 }
 
-// ... (HeroSection and AboutSection are unchanged) ...
-
-// 2. Hero Section
+// 2. Hero Section - UPDATED
 const HeroSection = () => (
   <section
     id="hero"
@@ -44,14 +43,15 @@ const HeroSection = () => (
         Axle<span className="text-red-600">X</span>
       </h1>
       <p className="text-xl md:text-5xl text-gray-300 font-light mt-4">
-        Engineering the <span className="text-red-600">Next Affordable Drive</span>
+        Hard-to-Find Automotive Parts for <span className="text-red-600">Classic & European Cars</span>
       </p>
       <p className="mt-2 text-3xl text-white-100 max-w-lg">
-        The first Engineering driven Automotive Parts Manufacturing Service in Sri Lanka.       </p>
-      <p className="mt-2 text-3xl text-red-500 max-w-lg">
-        Why pay more for Nothing, Pay for the Quality
+        3D Printed & Custom Fabricated Parts. Fast Delivery in Sri Lanka.
       </p>
-      <a
+      <p className="mt-2 text-3xl text-red-500 max-w-lg">
+        Specialized in Honda, Mitsubishi, Nissan, Toyota classics and Mercedes C-Class servicing.
+      </p>
+      
         href="#about"
         className="mt-10 flex items-center gap-2 border border-gray-700 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-white/5 hover:border-gray-500 transition-all"
       >
@@ -61,7 +61,7 @@ const HeroSection = () => (
   </section>
 );
 
-// 3. About Section
+// 3. About Section - UPDATED
 const AboutSection = () => (
   <section id="about" className="py-24 bg-gray-950/80 backdrop-blur-sm">
     <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -75,40 +75,34 @@ const AboutSection = () => (
         <h2 className="text-4xl font-bold text-white mb-6">
           Engineering the <span className="text-red-600">Next Affordable Drive</span>.
         </h2>
-        <p className="text-2xl -gray-400 mb-4">
-AxleX is driven by a passion for precision engineering and automotive design. We’re Sri Lanka’s first brand combining advanced 3D printing with expert craftsmanship to redefine what’s possible.
+        <p className="text-2xl text-gray-400 mb-4">
+          AxleX specializes in manufacturing hard-to-find automotive parts for classic and European vehicles in Sri Lanka. We use advanced 3D printing and custom fabrication to create parts that are no longer available through traditional suppliers.
         </p>
-        <p className="text-2xl -gray-400">
-Our mission is to redefine automotive design by creating custom parts, bodykits, and restorations that deliver top performance and style.
+        <p className="text-2xl text-gray-400">
+          Whether you're restoring a classic Honda, Mitsubishi, or maintaining a modern Mercedes, we can help you source the parts you need. Fast turnaround, competitive pricing, quality guaranteed.
         </p>
       </div>
     </div>
   </section>
 );
 
-
-// 4. Services Section (Updated)
+// 4. Services Section - UPDATED (Removed "tinkering" services, added European Car Servicing)
 const services = [
   {
-    title: "3D Printing & Prototyping",
-    description: "High-precision 3D printing for custom parts, prototypes, and one-off components.",
+    title: "Custom Parts Manufacturing",
+    description: "High-precision 3D printing for hard-to-find automotive parts. Specializing in Honda, Mitsubishi, Nissan, and Toyota classics. Custom brackets, trim pieces, interior components, and mechanical parts.",
     icon: <FaCube size={32} />
   },
   {
-    title: "Automotive Parts Design",
-    description: "Custom component design and reverse engineering, tailored for perfect fit and performance.",
+    title: "Reverse Engineering & Replacement Parts",
+    description: "Can't find a part? We reverse-engineer and manufacture replacements for discontinued components. Send us your broken part or specifications, and we'll recreate it.",
     icon: <MdOutlineDesignServices size={32} />,
-    link: "/parts" // <-- ADDED THIS LINK PROPERTY
+    link: "/parts"
   },
   {
-    title: "Custom Bodykit Manufacturing",
-    description: "Please wait, these are still tinkering",
-    icon: <FaCar size={32} />
-  },
-  {
-    title: "Full Vehicle Restoration",
-    description: "Please wait, these are still tinkering",
-    icon: <FaToolbox size={32} />
+    title: "European Car Servicing",
+    description: "Mercedes C-Class specialist. Diagnostics, maintenance, repairs, and parts sourcing for modern European vehicles.",
+    icon: <FaWrench size={32} />
   }
 ];
 
@@ -118,22 +112,19 @@ const ServicesSection = () => (
       <h2 className="text-center text-4xl font-bold text-white mb-16">
         Our <span className="text-red-600">Capabilities</span>
       </h2>
-      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service) => {
-          // This is the card component.
           const card = (
             <div
-              className="relative p-6 bg-gray-900 rounded-lg border border-gray-800 transition-all duration-300 hover:border-red-600/50 hover:shadow-2xl hover:shadow-red-900/20 transform hover:-translate-y-2 overflow-hidden group h-full" // Added h-full
+              className="relative p-6 bg-gray-900 rounded-lg border border-gray-800 transition-all duration-300 hover:border-red-600/50 hover:shadow-2xl hover:shadow-red-900/20 transform hover:-translate-y-2 overflow-hidden group h-full"
             >
               <span className="absolute top-0 left-0 w-full h-1 bg-red-600 transition-all duration-500 transform -translate-x-full group-hover:translate-x-0"></span>
               <div className="text-red-500 mb-5 pt-4">{service.icon}</div>
               <h3 className="text-2xl font-semibold text-white mb-2">{service.title}</h3>
-              <p className="text-xl -gray-400 text-sm">{service.description}</p>
+              <p className="text-xl text-gray-400 text-sm">{service.description}</p>
             </div>
           );
 
-          // If the service has a link, wrap the card in a Link tag.
-          // Otherwise, just return the card.
           return service.link ? (
             <Link href={service.link} key={service.title} className="h-full">
               {card}
@@ -149,8 +140,7 @@ const ServicesSection = () => (
   </section>
 );
 
-
-// 5. Gallery Section
+// 5. Gallery Section - UPDATED (Simplified placeholder text)
 const GallerySection = () => (
   <section id="gallery" className="py-24 bg-gray-950/80 backdrop-blur-sm">
     <div className="container mx-auto px-4">
@@ -158,10 +148,13 @@ const GallerySection = () => (
         Our <span className="text-red-600">Projects</span>
       </h2>
       <div className="grid md:grid-cols-3 gap-6">
-        <GalleryImagePlaceholder title="Tinkering in Progress" icon={<FaCube size={64} />} id="001" />
-        <GalleryImagePlaceholder title="Welding in Progress" icon={<FaCar size={64} />} id="002" />
-        <GalleryImagePlaceholder title="Restoration in Progress" icon={<FaToolbox size={64} />} id="003" />
+        <GalleryImagePlaceholder title="Honda XL250S Restoration" icon={<FaCube size={64} />} id="001" />
+        <GalleryImagePlaceholder title="Mitsubishi Lancer 1400GL" icon={<FaCar size={64} />} id="002" />
+        <GalleryImagePlaceholder title="Mercedes C200 Service" icon={<FaToolbox size={64} />} id="003" />
       </div>
+      <p className="text-center text-gray-400 mt-8 text-lg">
+        Project photos coming soon. Currently working on restorations and custom parts manufacturing.
+      </p>
     </div>
   </section>
 );
@@ -177,7 +170,7 @@ const GalleryImagePlaceholder = ({ title, icon, id }: { title: string, icon: Rea
   </div>
 );
 
-// 6. Contact Section
+// 6. Contact Section - UNCHANGED
 const ContactSection = () => (
   <section id="contact" className="py-24 bg-black/80 backdrop-blur-sm">
     <div className="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
@@ -185,8 +178,8 @@ const ContactSection = () => (
         <h2 className="text-4xl font-bold text-white mb-4">
           Let's Build Something<span className="text-red-600"> Extraordinary</span>.
         </h2>
-        <p className="text-xl -gray-400 mb-8">
-Got a project in mind? From custom parts to complete vehicle transformations, our engineers are ready to bring your vision to life.
+        <p className="text-xl text-gray-400 mb-8">
+          Got a project in mind? From custom parts to complete vehicle transformations, our engineers are ready to bring your vision to life.
         </p>
         <div className="space-y-4">
           <a href="mailto:axlex@axlex.tech" className="flex items-center gap-4 text-gray-300 hover:text-red-500 transition-colors group">
@@ -218,7 +211,7 @@ Got a project in mind? From custom parts to complete vehicle transformations, ou
         </div>
         <button
           type="submit"
-          className="w-full flex items-center justify-center gap-2 bg-red-600 text-xl -white px-6 py-4 rounded-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105"
+          className="w-full flex items-center justify-center gap-2 bg-red-600 text-xl text-white px-6 py-4 rounded-lg font-semibold hover:bg-red-700 transition-all transform hover:scale-105"
         >
           Send Inquiry <FaArrowRight />
         </button>
