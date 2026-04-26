@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -30,7 +29,6 @@ export default function PartsCatalogue() {
             Browse our in-house designed and 3D-printed parts.
           </p>
         </div>
-
         <div className="mt-6 md:mt-0">
           <label htmlFor="model-filter" className="block text-sm font-medium text-gray-400 mb-2">
             Filter by Vehicle Model
@@ -52,35 +50,46 @@ export default function PartsCatalogue() {
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {filteredParts.length > 0 ? (
           filteredParts.map((part: Part) => (
-            <Link
-              href={`/parts/${part.slug}`}
+            <div
               key={part.id}
-              className="relative bg-gray-900 rounded-lg border border-gray-800 overflow-hidden group cursor-pointer transition-all hover:border-red-600/50"
+              className="relative bg-gray-900 rounded-lg border border-gray-800 overflow-hidden group transition-all hover:border-red-600/50"
             >
-              <div className="relative w-full aspect-square">
-                {part.imageUrl ? (
-                  <Image
-                    src={part.imageUrl}
-                    alt={part.name}
-                    fill
-                    style={{ objectFit: "cover" }}
-                    className="group-hover:scale-105 transition-transform duration-300"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center bg-gray-800">
-                    <FaCar className="text-5xl text-gray-700" />
-                  </div>
-                )}
+              <Link href={`/parts/${part.slug}`}>
+                <div className="relative w-full aspect-square">
+                  {part.imageUrl ? (
+                    <Image
+                      src={part.imageUrl}
+                      alt={part.name}
+                      fill
+                      style={{ objectFit: "cover" }}
+                      className="group-hover:scale-105 transition-transform duration-300"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-gray-800">
+                      <FaCar className="text-5xl text-gray-700" />
+                    </div>
+                  )}
+                </div>
+                <div className="p-4">
+                  <p className="text-xs text-gray-500">{part.model}</p>
+                  <h3 className="text-lg font-semibold text-white truncate">{part.name}</h3>
+                  <p className="text-xl font-bold text-red-600 mt-2">
+                    ${part.price.toFixed(2)}
+                  </p>
+                </div>
+              </Link>
+
+              <div className="px-4 pb-4">
+                <a
+                  href={`https://wa.me/94719686487?text=Hi%20AxleX%2C%20I%20am%20interested%20in%20${encodeURIComponent(part.name)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-1 block w-full text-center bg-green-600 hover:bg-green-500 text-white text-sm font-semibold py-2 rounded-lg transition-colors"
+                >
+                  Order via WhatsApp
+                </a>
               </div>
-              
-              <div className="p-4">
-                <p className="text-xs text-gray-500">{part.model}</p>
-                <h3 className="text-lg font-semibold text-white truncate">{part.name}</h3>
-                <p className="text-xl font-bold text-red-600 mt-2">
-                  ${part.price.toFixed(2)}
-                </p> 
-              </div>
-            </Link>
+            </div>
           ))
         ) : (
           <p className="text-gray-400 md:col-span-4">
