@@ -26,6 +26,14 @@ export const partsData: Part[] = [
     description: 'Full 4-piece widebody fender flare kit...',
   },
   {
+    id: 'AX-007',
+    name: 'Widebody Fender Flares',
+    slug: 'widebody-fenders-civic-fk8',
+    model: 'Honda Civic',
+    price: 800.50,
+    description: 'Full 4-piece widebody fender flare kit...',
+  },
+  {
     id: 'AX-003',
     name: 'Vented Hood (Carbon)',
     slug: 'vented-hood-evo-x',
