@@ -29,7 +29,7 @@ export const partsData: Part[] = [
     id: 'AX-007',
     name: 'Widebody Fender Flares',
     slug: 'widebody-fenders-civic-fk8',
-    model: 'Honda Civic',
+    model: 'Mercedes Benz C200',
     price: 800.50,
     description: 'Full 4-piece widebody fender flare kit...',
   },
