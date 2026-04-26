@@ -2,7 +2,7 @@ export interface Part {
   id: string;
   name: string;
   slug: string;
-  model: 'Subaru WRX' | 'Honda Civic' | 'Lancer Evo' | 'General';
+  model: 'Subaru WRX' | 'Honda Civic' | 'Lancer Evo' | 'General' | 'Mercedes Benz C200';
   price: number;
   description: string;
   imageUrl?: string; // This is from our previous step, it's fine
