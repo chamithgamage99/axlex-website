@@ -10,9 +10,8 @@ import {
   FaWhatsapp
 } from 'react-icons/fa';
 import { MdEngineering, MdOutlineDesignServices } from 'react-icons/md';
-import { FaWrench } from 'react-icons/fa'; // Added for European Car Servicing
+import { FaWrench } from 'react-icons/fa';
 
-/* --- Main Page Component --- */
 export default function Home() {
   return (
     <>
@@ -25,7 +24,6 @@ export default function Home() {
   );
 }
 
-// 2. Hero Section - UPDATED
 const HeroSection = () => (
   <section
     id="hero"
@@ -51,7 +49,7 @@ const HeroSection = () => (
       <p className="mt-2 text-3xl text-red-500 max-w-lg">
         Specialized in Honda, Mitsubishi, Nissan, Toyota classics and Mercedes C-Class servicing.
       </p>
-      
+      <a
         href="#about"
         className="mt-10 flex items-center gap-2 border border-gray-700 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-white/5 hover:border-gray-500 transition-all"
       >
@@ -61,7 +59,6 @@ const HeroSection = () => (
   </section>
 );
 
-// 3. About Section - UPDATED
 const AboutSection = () => (
   <section id="about" className="py-24 bg-gray-950/80 backdrop-blur-sm">
     <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
@@ -86,7 +83,7 @@ const AboutSection = () => (
   </section>
 );
 
-// 4. Services Section - UPDATED (Removed "tinkering" services, added European Car Servicing)
+
 const services = [
   {
     title: "Custom Parts Manufacturing",
@@ -140,7 +137,7 @@ const ServicesSection = () => (
   </section>
 );
 
-// 5. Gallery Section - UPDATED (Simplified placeholder text)
+
 const GallerySection = () => (
   <section id="gallery" className="py-24 bg-gray-950/80 backdrop-blur-sm">
     <div className="container mx-auto px-4">
@@ -170,7 +167,7 @@ const GalleryImagePlaceholder = ({ title, icon, id }: { title: string, icon: Rea
   </div>
 );
 
-// 6. Contact Section - UNCHANGED
+
 const ContactSection = () => (
   <section id="contact" className="py-24 bg-black/80 backdrop-blur-sm">
     <div className="container mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
