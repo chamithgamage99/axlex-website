@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { FaArrowRight, FaCheckCircle, FaWhatsapp } from "react-icons/fa";
 
-const BOOKING_URL = "https://cal.com/axlex/scan";
+const BOOKING_URL = "https://cal.com/axlex-y1wjxo/30min";
 const WHATSAPP_URL =
   "https://wa.me/94719686487?text=Hi%20Chamith%2C%20I%27d%20like%20to%20book%20a%20car%20park%20diagnostic%20scan.";
 
