@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { FaArrowRight, FaCheckCircle, FaWhatsapp } from "react-icons/fa";
+import { FaArrowRight, FaCheckCircle, FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import { MdVerified } from "react-icons/md";
 
 const BOOKING_URL = "https://cal.com/axlex-y1wjxo/30min";
 const WHATSAPP_URL =
@@ -32,12 +33,7 @@ const pastFixes = [
 
 export default function DiagnosticsPage() {
   return (
-    <div
-      className="font-[family-name:var(--font-share-tech)] min-h-screen px-4 py-12 sm:py-16"
-      style={{
-        background: "radial-gradient(ellipse at top, #2d0300 0%, #000000 65%)",
-      }}
-    >
+    <div className="font-[family-name:var(--font-share-tech)] min-h-screen px-4 py-12 sm:py-16">
       <div className="mx-auto max-w-2xl">
         {/* Location Tag */}
         <div className="inline-flex items-center gap-2 rounded-full border border-red-600/40 bg-red-950/40 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-red-400">
@@ -58,7 +54,7 @@ export default function DiagnosticsPage() {
         </p>
 
         {/* Price + Primary CTA Card */}
-        <div className="mt-8 rounded-xl border border-gray-800 bg-gray-900/90 p-6 shadow-2xl">
+        <div className="mt-8 rounded-xl border border-gray-800 bg-gray-900/80 backdrop-blur-sm p-6 shadow-2xl">
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
             <div>
               <p className="text-xs font-semibold uppercase tracking-wider text-gray-400">
@@ -94,8 +90,42 @@ export default function DiagnosticsPage() {
           </div>
         </div>
 
+        {/* ENGINEER PROFILE / WHO I AM SECTION */}
+        <div className="mt-8 rounded-xl border border-gray-800 bg-gray-900/75 backdrop-blur-sm p-6 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-1 h-full bg-red-600" />
+          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
+            {/* Portrait Image */}
+            <div className="relative shrink-0">
+              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-0.5 bg-gradient-to-tr from-red-600 via-red-500/40 to-gray-700">
+                <img
+                  src="/chamith.jpg"
+                  alt="Chamith - Mechanical Engineer & Founder of AxleX"
+                  className="w-full h-full object-cover rounded-full bg-gray-950"
+                />
+              </div>
+            </div>
+
+            {/* Bio & Credentials */}
+            <div className="text-center sm:text-left">
+              <div className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-red-400">
+                <MdVerified className="text-red-500" size={16} />
+                Your Diagnostic Engineer
+              </div>
+              <h2 className="mt-0.5 text-2xl font-bold text-white">
+                Hi, I&apos;m <span className="text-red-500">Chamith</span>
+              </h2>
+              <p className="text-sm font-semibold text-gray-300">
+                Mechanical Engineer at Vega Innovations • Founder, AxleX
+              </p>
+              <p className="mt-2.5 text-sm leading-relaxed text-gray-400">
+                I work daily on automotive systems, EVs, and vehicle electronics. Instead of guesswork or unnecessary parts swapping, I use OEM-grade telemetry and root-cause engineering to show you exactly what is happening inside your car—right here at the Trace Expert City car park.
+              </p>
+            </div>
+          </div>
+        </div>
+
         {/* 3 Simple Bullets */}
-        <div className="mt-8 rounded-xl border border-gray-800 bg-gray-900/60 p-6">
+        <div className="mt-8 rounded-xl border border-gray-800 bg-gray-900/65 backdrop-blur-sm p-6">
           <h2 className="text-2xl font-bold text-white">
             What You Get for <span className="text-red-600">LKR 1,500</span>
           </h2>
@@ -146,7 +176,7 @@ export default function DiagnosticsPage() {
             {pastFixes.map((item) => (
               <div
                 key={item.car}
-                className="rounded-lg border border-gray-800 bg-gray-900/70 px-4 py-3"
+                className="rounded-lg border border-gray-800 bg-gray-900/75 backdrop-blur-sm px-4 py-3"
               >
                 <div className="text-base font-bold text-white">{item.car}</div>
                 <div className="mt-0.5 text-sm font-medium text-gray-400">
