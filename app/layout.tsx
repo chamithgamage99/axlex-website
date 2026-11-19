@@ -26,10 +26,13 @@ export const metadata: Metadata = {
 const Navbar = () => (
   <nav className="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md border-b border-gray-800/50">
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+      {/* Replaced text with your logo image */}
       <Link href="/#hero" className="flex items-center">
-        <h1 className="text-3xl font-extrabold text-white">
-          Axle<span className="text-red-600">X</span>
-        </h1>
+        <img
+          src="/logo.png"
+          alt="AxleX"
+          className="h-10 md:h-12 w-auto object-contain hover:scale-105 transition-transform"
+        />
       </Link>
 
       {/* Mobile Quick Links */}
@@ -66,7 +69,6 @@ const Navbar = () => (
     </div>
   </nav>
 );
-
 // 7. FOOTER
 const Footer = () => (
   <footer className="relative z-10 py-12 bg-gray-950/60 backdrop-blur-md border-t border-gray-800/50">
