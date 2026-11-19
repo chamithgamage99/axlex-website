@@ -73,9 +73,11 @@ const Navbar = () => (
 const Footer = () => (
   <footer className="relative z-10 py-12 bg-gray-950/60 backdrop-blur-md border-t border-gray-800/50">
     <div className="container mx-auto px-4 text-center">
-      <h3 className="text-3xl font-extrabold text-white">
-        Axle<span className="text-red-600">X</span>
-      </h3>
+<img
+  src="/logo.png"
+  alt="AxleX"
+  className="h-12 w-auto object-contain mx-auto"
+/>
       <p className="text-gray-500 text-sm mt-2">
         Engineering the <span className="text-red-600">Next Affordable Drive</span>. First time in Sri Lanka.
       </p>
