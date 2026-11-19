@@ -96,7 +96,7 @@ export default function DiagnosticsPage() {
           <div className="flex flex-col sm:flex-row items-center sm:items-start gap-5">
             {/* Portrait Image */}
             <div className="relative shrink-0">
-              <div className="w-24 h-24 sm:w-28 sm:h-28 rounded-full p-0.5 bg-gradient-to-tr from-red-600 via-red-500/40 to-gray-700">
+              <div className="w-34 h-34 sm:w-28 sm:h-28 rounded-full p-0.5 bg-gradient-to-tr from-red-600 via-red-500/40 to-gray-700">
                 <img
                   src="/chamith.jpg"
                   alt="Chamith - Mechanical Engineer & Founder of AxleX"
