@@ -76,11 +76,11 @@ background: 'radial-gradient(ellipse at bottom, #2d0300 0%, #000000 70%)'
 
 <div className="relative z-10 flex flex-col items-center">
 
-<h1 className="text-7xl md:text-9xl font-extrabold text-white tracking-tighter">
-
-Axle<span className="text-red-600">X</span>
-
-</h1>
+<img 
+  src="/logo.png" 
+  alt="AxleX Logo" 
+  className="w-72 md:w-[450px] h-auto object-contain mb-2 animate-fade-in" 
+/>
 
 <p className="text-xl md:text-5xl text-gray-300 font-light mt-4">
 
