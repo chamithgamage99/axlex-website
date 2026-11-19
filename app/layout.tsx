@@ -69,7 +69,7 @@ const Navbar = () => (
 
 // 7. FOOTER
 const Footer = () => (
-  <footer className="py-12 bg-gray-950 border-t border-gray-800/50">
+  <footer className="relative z-10 py-12 bg-gray-950/60 backdrop-blur-md border-t border-gray-800/50">
     <div className="container mx-auto px-4 text-center">
       <h3 className="text-3xl font-extrabold text-white">
         Axle<span className="text-red-600">X</span>
@@ -80,11 +80,11 @@ const Footer = () => (
       <div className="flex gap-6 my-8 justify-center">
         {/*
         <a href="https://www.instagram.com/your_instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors"><FaInstagram size={24} /></a>
-       <a href="https://www.facebook.com/your_facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors"><FaFacebook size={24} /></a>
-       <a href="https://www.youtube.com/your_youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-600 transition-colors"><FaYoutube size={24} /></a>
-       <a href="https://www.tiktok.com/@your_tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaTiktok size={24} /></a>
-       */}
-       <a href="https://wa.me/94719686487" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition-colors"><FaWhatsapp size={24} /></a>
+        <a href="https://www.facebook.com/your_facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors"><FaFacebook size={24} /></a>
+        <a href="https://www.youtube.com/your_youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-600 transition-colors"><FaYoutube size={24} /></a>
+        <a href="https://www.tiktok.com/@your_tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaTiktok size={24} /></a>
+        */}
+        <a href="https://wa.me/94719686487" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition-colors"><FaWhatsapp size={24} /></a>
       </div>
       <p className="text-xs text-gray-600">
         &copy; {new Date().getFullYear()} AxleX – All rights reserved.
@@ -100,10 +100,32 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${shareTech.variable} scroll-smooth`}>
-      <body>
-        <div className="min-h-screen w-full bg-black text-gray-300 font-sans overflow-x-hidden">
+      <body className="bg-black">
+        <div className="relative min-h-screen w-full text-gray-300 font-sans overflow-x-hidden flex flex-col">
+          {/* FIXED GLOBAL BACKGROUND */}
+          <div
+            className="fixed inset-0 z-0 pointer-events-none flex items-center justify-center overflow-hidden"
+            style={{
+              background: 'radial-gradient(ellipse at bottom, #2d0300 0%, #000000 70%)'
+            }}
+          >
+            {/* Giant Background Logo Watermark */}
+            <img
+              src="/logo.png"
+              alt=""
+              aria-hidden="true"
+              className="w-[90vw] max-w-5xl h-auto object-contain opacity-[0.07] mix-blend-screen select-none"
+            />
+
+            {/* Ambient Glow Blurs */}
+            <div className="absolute inset-0 opacity-20">
+              <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/50 rounded-full filter blur-3xl opacity-30 animate-pulse-slow"></div>
+              <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gray-700/50 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+            </div>
+          </div>
+
           <Navbar />
-          <main>{children}</main>
+          <main className="relative z-10 flex-grow">{children}</main>
           <Footer />
         </div>
       </body>
