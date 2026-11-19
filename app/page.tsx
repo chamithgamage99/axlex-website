@@ -29,39 +29,51 @@ const HeroSection = () => (
     id="hero"
     className="relative h-screen flex items-center justify-center text-center px-4 overflow-hidden"
     style={{
-      background: 'radial-gradient(ellipse at bottom, #2d0300 0%, #000000 70%)'
+      background: 'radial-gradient(ellipse at bottom, #3b0400 0%, #0a0000 50%, #000000 85%)'
     }}
   >
-    <div className="absolute inset-0 z-0 opacity-20">
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-red-900/50 rounded-full filter blur-3xl opacity-30 animate-pulse-slow"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-72 h-72 bg-gray-700/50 rounded-full filter blur-3xl opacity-20 animate-pulse"></div>
+    {/* Ambient Background Glows */}
+    <div className="absolute inset-0 z-0 pointer-events-none">
+      {/* Top/Center deep red radial light */}
+      <div 
+        className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-40 blur-[100px]"
+        style={{ background: 'radial-gradient(circle, #dc2626 0%, transparent 70%)' }}
+      />
+      {/* Subtle circular aura ring behind the logo */}
+      <div className="absolute top-[38%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] h-[340px] md:w-[520px] md:h-[520px] rounded-full border border-red-600/20 shadow-[0_0_80px_rgba(220,38,38,0.25)] opacity-70" />
     </div>
+
     <div className="relative z-10 flex flex-col items-center">
-      {/* Replaced 'AxleX' heading with your logo */}
-<img 
-  src="/logo.png" 
-  alt="AxleX Logo" 
-  className="w-72 md:w-[450px] h-auto object-contain mb-2 animate-fade-in" 
-/>
-      <p className="text-xl md:text-5xl text-gray-300 font-light mt-4">
+      {/* Logo Wrapper with Drop-Shadow & Backlight */}
+      <div className="relative flex items-center justify-center mb-4">
+        {/* Tight red backlight directly behind the letters */}
+        <div className="absolute inset-0 bg-red-600/25 blur-3xl rounded-full scale-90" />
+        
+        <img 
+          src="/logo.png" 
+          alt="AxleX Logo" 
+          className="relative z-10 w-72 md:w-[450px] h-auto object-contain drop-shadow-[0_0_25px_rgba(220,38,38,0.45)]" 
+        />
+      </div>
+
+      <p className="text-xl md:text-5xl text-gray-300 font-light mt-2">
         Hard-to-Find Automotive Parts for <span className="text-red-600">Classic & European Cars</span>
       </p>
-      <p className="mt-2 text-3xl text-white-100 max-w-lg">
-        3D Printed & Custom Fabricated Parts. Fast Delivery in Sri Lanka.
+      <p className="mt-4 text-lg md:text-2xl text-gray-200 max-w-xl">
+        3D Printed & Custom Fabricated Parts. <span className="text-red-500">Fast Delivery</span> in Sri Lanka.
       </p>
-      <p className="mt-2 text-3xl text-red-500 max-w-lg">
-        Specialized in Honda, Mitsubishi, Nissan, Toyota classics and Mercedes C-Class servicing.
+      <p className="mt-2 text-base md:text-xl text-gray-400 max-w-2xl">
+        Specialized in <span className="text-red-500">Honda, Mitsubishi, Nissan, Toyota</span> classics and <span className="text-red-500">Mercedes C-Class</span> servicing.
       </p>
       <a
         href="#about"
-        className="mt-10 flex items-center gap-2 border border-gray-700 text-gray-300 px-6 py-3 rounded-lg font-medium hover:bg-white/5 hover:border-gray-500 transition-all"
+        className="mt-10 flex items-center gap-2 border border-gray-700 bg-white/5 text-gray-300 px-8 py-3 rounded-lg font-medium hover:bg-red-600/10 hover:border-red-500/50 hover:text-white transition-all"
       >
         Learn More
       </a>
     </div>
   </section>
 );
-
 const AboutSection = () => (
   <section id="about" className="py-24 bg-gray-950/80 backdrop-blur-sm">
     <div className="container mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
