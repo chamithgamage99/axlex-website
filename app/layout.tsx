@@ -78,10 +78,10 @@ const Footer = () => (
         Engineering the <span className="text-red-600">Next Affordable Drive</span>. First time in Sri Lanka.
       </p>
       <div className="flex gap-6 my-8 justify-center">
-       // <a href="https://www.instagram.com/your_instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors"><FaInstagram size={24} /></a>
-       // <a href="https://www.facebook.com/your_facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors"><FaFacebook size={24} /></a>
-       // <a href="https://www.youtube.com/your_youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-600 transition-colors"><FaYoutube size={24} /></a>
-       // <a href="https://www.tiktok.com/@your_tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaTiktok size={24} /></a>
+     /*  <a href="https://www.instagram.com/your_instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-500 transition-colors"><FaInstagram size={24} /></a>
+       <a href="https://www.facebook.com/your_facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-blue-600 transition-colors"><FaFacebook size={24} /></a>
+       <a href="https://www.youtube.com/your_youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-red-600 transition-colors"><FaYoutube size={24} /></a>
+       <a href="https://www.tiktok.com/@your_tiktok" aria-label="TikTok" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors"><FaTiktok size={24} /></a> */
         <a href="https://wa.me/94719686487" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-green-500 transition-colors"><FaWhatsapp size={24} /></a>
       </div>
       <p className="text-xs text-gray-600">
