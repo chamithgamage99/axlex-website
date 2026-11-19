@@ -39,7 +39,7 @@ const HeroSection = () => (
     <div className="relative z-10 flex flex-col items-center">
       {/* Replaced 'AxleX' heading with your logo */}
       <img 
-        src="app/logo.png" // Replace with the actual path to your logo image file
+        src= app/logo.png // Replace with the actual path to your logo image file
         alt="AxleX Logo" 
         className="w-72 md:w-[450px] h-auto object-contain mb-2 animate-fade-in" 
       />
