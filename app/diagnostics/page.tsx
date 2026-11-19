@@ -53,7 +53,7 @@ export default function DiagnosticsPage() {
 
         <p className="mt-3 text-lg font-medium text-gray-300">
           Get a full system OEM scan and live sensor
-          health check during lunch or after work—even if you don&apos;t have a
+          health check during lunch or after work, even if you don&apos;t have a
           warning light on yet.
         </p>
 
