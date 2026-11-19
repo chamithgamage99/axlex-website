@@ -12,22 +12,22 @@ const WHATSAPP_URL =
   "https://wa.me/94719686487?text=Hi%20Chamith%2C%20I%27d%20like%20to%20book%20a%20car%20park%20diagnostic%20scan.";
 
 export const metadata: Metadata = {
-  title: "On-Site Vehicle Diagnostics (LKR 1,500) | AxleX",
+  title: "On Site Vehicle Diagnostics",
   description:
-    "OEM-level full module scan and live-data health check at the Vega Innovations car park. LKR 1,500 per session with PDF report.",
+    "OEM level full module scan and live-data health check at the Trace Expert city car park. LKR 1,500 per session with PDF report.",
 };
 
 const pastFixes = [
   {
-    car: "2019 Mercedes-Benz C200 Mild Hybrid",
+    car: "2019 Mercedes Benz C200 Mild Hybrid",
     fix: "Post accident electrical recovery, SRS crash unlock, pyrofuse & 48V hybrid integration.",
   },
   {
-    car: "Suzuki Wagon R MH44S (ISG)",
-    fix: "Isolated intermittent ISG hybrid assist/charging faults missed by regular workshops.",
+    car: "2014 Suzuki Wagon R MH44S",
+    fix: "ISG hybrid assist/charging faults missed by regular workshops.",
   },
   {
-    car: "2008 Petrol Engine (Misfire)",
+    car: "2008 Toyota Vitz",
     fix: "Pinpointed a heat drifting ignition coil via resistance testing & live misfire counters.",
   },
   {
@@ -53,13 +53,13 @@ export default function DiagnosticsPage() {
 
         {/* Headline */}
         <h1 className="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl">
-          Dealer-Level Car Diagnostics.{" "}
-          <span className="text-red-600">Right Where You Park.</span>
+          Dealer Level Car Diagnostics without any Risk.{" "}
+          <span className="text-red-600">Right Where You Park your Daily Drive.</span>
         </h1>
 
         <p className="mt-3 text-lg font-medium text-gray-300">
-          Skip the workshop queue. Get a full-system OEM scan and live sensor
-          health check during lunch or after work—even if you don&apos;t have a
+          Get a full system OEM scan and live sensor
+          health check during lunch or after workeven if you don&apos;t have a
           warning light on yet.
         </p>
 
