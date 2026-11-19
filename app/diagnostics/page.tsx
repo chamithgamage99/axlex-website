@@ -48,7 +48,7 @@ export default function DiagnosticsPage() {
         {/* Location Tag */}
         <div className="inline-flex items-center gap-2 rounded-full border border-red-600/40 bg-red-950/40 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-red-400">
           <span className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
-          Vega Innovations Car Park • On-Site Scan
+          Trace Expert City Car Park • On-Site Scan by a Mechanical Engineer at Vega Innovations
         </div>
 
         {/* Headline */}
