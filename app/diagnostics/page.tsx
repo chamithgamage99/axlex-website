@@ -1,11 +1,5 @@
 import type { Metadata } from "next";
-import { Rajdhani } from "next/font/google";
 import { FaArrowRight, FaCheckCircle, FaWhatsapp } from "react-icons/fa";
-
-const rajdhani = Rajdhani({
-  subsets: ["latin"],
-  weight: ["500", "600", "700"],
-});
 
 const BOOKING_URL = "https://cal.com/axlex-y1wjxo/30min";
 const WHATSAPP_URL =
@@ -39,7 +33,7 @@ const pastFixes = [
 export default function DiagnosticsPage() {
   return (
     <div
-      className={`${rajdhani.className} min-h-screen px-4 py-12 sm:py-16`}
+      className="font-[family-name:var(--font-share-tech)] min-h-screen px-4 py-12 sm:py-16"
       style={{
         background: "radial-gradient(ellipse at top, #2d0300 0%, #000000 65%)",
       }}
@@ -59,7 +53,7 @@ export default function DiagnosticsPage() {
 
         <p className="mt-3 text-lg font-medium text-gray-300">
           Get a full system OEM scan and live sensor
-          health check during lunch or after workeven if you don&apos;t have a
+          health check during lunch or after work—even if you don&apos;t have a
           warning light on yet.
         </p>
 
