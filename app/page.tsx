@@ -209,9 +209,9 @@ const ContactSection = () => (
         </p>
 
         <div className="space-y-4">
-          <a href="mailto:axlex@axlex.tech" className="flex items-center gap-4 text-gray-300 hover:text-red-500 transition-colors group">
+          <a href="mailto:axlex@axlex.lk" className="flex items-center gap-4 text-gray-300 hover:text-red-500 transition-colors group">
             <FaEnvelope size={20} className="text-gray-500 group-hover:text-red-500 transition-colors" />
-            <span>axlex@axlex.tech</span>
+            <span>axlex@axlex.lk</span>
           </a>
 
           <a href="https://wa.me/94719686487" className="flex items-center gap-4 text-gray-300 hover:text-green-500 transition-colors group">
